@@ -1,0 +1,23 @@
+.getInfo_container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 30px;
+
+}
+
+.getInfo_btn {
+    width: 7rem;
+    height: 3rem;
+    padding: 10px;
+    margin: 10px 30px;
+}
+
+.single_item{
+    display: flex;
+}
