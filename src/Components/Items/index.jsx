@@ -26,13 +26,14 @@ function Items() {
                         type="number"
                         value={num}
                         onChange={(e) => setNum(e.target.value)}
+                        placeholder="Cantidad..."
                     />
                     <input
                         className="getInfo_text"
                         type="text"
                         value={item}
                         onChange={(e) => setItem(e.target.value)}
-                        placeholder="Pasaporte.." />
+                        placeholder="Pasaporte..." />
                     <button className="getInfo_btn" type="submit"> Agregar </button>
                 </form>
             </section>
@@ -40,8 +41,11 @@ function Items() {
             <section className="items_container">
                 {arrayItems.map((obj, index) => (
                     <div className="single_item" key={index}>
-                        <input className="check_item" type="checkbox" />
-                        <h3> {obj.num} {obj.item} </h3>
+                        <label htmlFor={`item-${index}`}>
+                            <input className="check_item" type="checkbox" id={`item-${index}`} />
+                            <span className="item_text">{obj.num} {obj.item}</span>
+                        </label>
+
                     </div>
                 ))}
             </section>
